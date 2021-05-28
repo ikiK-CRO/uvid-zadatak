@@ -1,11 +1,10 @@
 document.querySelector('#test').addEventListener('click', e => {
   //document.querySelector('input').value
-  const arr = [5,3,9,8]
-  let i = 1
-  const loop = arr.length - i
+  const arr = [3,2,1,1,3,3]
+  
   let result = []
 
-  for (i; i < loop; i++) {
+  for (let i = 1; i < arr.length - 1; i++) {
     //console.log(arr[i])
     const right = arr.slice(i + 1)
     const left = arr
