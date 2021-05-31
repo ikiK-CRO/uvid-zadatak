@@ -52,7 +52,7 @@ body {
 }
 
 h1 {
-  filter: drop-shadow(3px 2px 1px black);
+  filter: drop-shadow(2px 1px 1px black);
   margin: 20px;
   max-height: 40px;
 }
@@ -72,8 +72,7 @@ h1 {
   font-weight: 300;
   line-height: 1.2;
   text-align: left;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
+  margin: 0.4em 3em 0.4em 3em;
   background: transparent;
   color: white;
 }
@@ -115,7 +114,30 @@ footer {
 }
 
 footer div {
-    margin: 10px 50px 10px 10px;
-    color: white;
-    font-size: small;
+  margin: 10px 50px 10px 10px;
+  color: white;
+  font-size: small;
+}
+
+#morph {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 80px;
+  width: 350px;
+  border-radius: 5px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 20px #bebebe, -5px -5px 20px #ffffff;
+}
+
+.morph-inset {
+  box-shadow: inset 5px 5px 20px #bebebe, inset -5px -5px 20px #ffffff !important;
+}
+button {
+  margin-left: 10px;
+}
+
+input {
+    width: 250px;
 }

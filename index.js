@@ -1,8 +1,16 @@
 const inputEl = document.querySelector('input')
 const resultEl = document.querySelector('#result')
+const morph = document.querySelector('#morph')
 
 document.querySelector('#test').addEventListener('click', e => {
   const arr = inputEl.value.split(' ')
+
+  morph.classList.add('morph-inset')
+
+  setTimeout(function () {
+    morph.classList.remove('morph-inset')
+  }, 200)
+
   validate(inputEl.value) == true
     ? doMath(arr)
     : ((resultEl.innerHTML =
