@@ -2,6 +2,8 @@ const inputEl = document.querySelector('input')
 const resultEl = document.querySelector('#result')
 const morph = document.querySelector('#morph')
 
+
+//EVENT
 document.querySelector('#test').addEventListener('click', e => {
   const arr = inputEl.value.split(' ')
 
@@ -19,6 +21,8 @@ document.querySelector('#test').addEventListener('click', e => {
       resultEl.classList.add('alert-error'))
 })
 
+
+//VALIDACIJA
 const validate = val => {
   if (/^([0-9]+ )+[0-9]+$|^[0-9]]+$/.test(val)) {
     // dozvoljeni samo cjeli brojevi s jednim razmakom isključivo između brojeva
@@ -28,6 +32,8 @@ const validate = val => {
   }
 }
 
+
+// FUNKCIJE RAČUNJANJA I REZULTATA
 const doMath = arr => {
   let result = [] // array pošto je dozvoljena 0 kao cjeli broj, primjer: 5 3 0 0 8 - rezultat 2 i 3
 
