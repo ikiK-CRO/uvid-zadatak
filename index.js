@@ -2,7 +2,6 @@ const inputEl = document.querySelector('input')
 const resultEl = document.querySelector('#result')
 const morph = document.querySelector('#morph')
 
-
 //EVENT
 document.querySelector('#test').addEventListener('click', e => {
   const arr = inputEl.value.split(' ')
@@ -21,7 +20,6 @@ document.querySelector('#test').addEventListener('click', e => {
       resultEl.classList.add('alert-error'))
 })
 
-
 //VALIDACIJA
 const validate = val => {
   if (/^([0-9]+ )+[0-9]+$|^[0-9]]+$/.test(val)) {
@@ -31,7 +29,6 @@ const validate = val => {
     return false
   }
 }
-
 
 // FUNKCIJE RAČUNJANJA I REZULTATA
 const doMath = arr => {
@@ -47,18 +44,19 @@ const doMath = arr => {
     if (sumArr(right) === sumArr(left)) {
       result.push(i)
     }
-    if (result.length == 0) {
-      resultEl.innerHTML =
-        '<i class="fa fa-info-circle" aria-hidden="true"></i> Rezultata: 0'
-      resultEl.classList.remove('alert-error', 'alert-success')
-      resultEl.classList.add('alert-info')
-    } else {
-      resultEl.innerHTML =
-        '<i class="fa fa-check-circle" aria-hidden="true"></i> Rezultat: ' +
-        result
-      resultEl.classList.remove('alert-error', 'alert-info')
-      resultEl.classList.add('alert-success')
-    }
+  }
+
+  if (result.length == 0) {
+    resultEl.innerHTML =
+      '<i class="fa fa-info-circle" aria-hidden="true"></i> Rezultata: 0'
+    resultEl.classList.remove('alert-error', 'alert-success')
+    resultEl.classList.add('alert-info')
+  } else {
+    resultEl.innerHTML =
+      '<i class="fa fa-check-circle" aria-hidden="true"></i> Rezultat: ' +
+      result
+    resultEl.classList.remove('alert-error', 'alert-info')
+    resultEl.classList.add('alert-success')
   }
 }
 
