@@ -5,8 +5,10 @@ document.querySelector('#test').addEventListener('click', e => {
   const arr = inputEl.value.split(' ')
   validate(inputEl.value) == true
     ? doMath(arr)
-    : (resultEl.innerHTML =
-        'Dozvoljeni format je niz cjelih brojeva podjeljen s jednim razmakom.')
+    : ((resultEl.innerHTML =
+        ' <i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i> Dozvoljeni format je niz cjelih brojeva podijeljen s jednim razmakom.'),
+      resultEl.classList.remove('alert-info', 'alert-success'),
+      resultEl.classList.add('alert-error'))
 })
 
 const validate = val => {
@@ -32,9 +34,16 @@ const doMath = arr => {
       result.push(i)
     }
     if (result.length == 0) {
-      resultEl.innerHTML = 'Rezultata: 0'
+      resultEl.innerHTML =
+        '<i class="fa fa-info-circle" aria-hidden="true"></i> Rezultata: 0'
+      resultEl.classList.remove('alert-error', 'alert-success')
+      resultEl.classList.add('alert-info')
     } else {
-      resultEl.innerHTML = 'Rezultat: ' + result
+      resultEl.innerHTML =
+        '<i class="fa fa-check-circle" aria-hidden="true"></i> Rezultat: ' +
+        result
+      resultEl.classList.remove('alert-error', 'alert-info')
+      resultEl.classList.add('alert-success')
     }
   }
 }
