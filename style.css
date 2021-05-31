@@ -61,9 +61,6 @@ h1 {
   width: 100%;
 }
 
-#result {
-}
-
 .alert {
   position: relative;
   display: block;
@@ -139,5 +136,5 @@ button {
 }
 
 input {
-    width: 250px;
+  width: 250px;
 }

@@ -16,7 +16,7 @@ document.querySelector('#test').addEventListener('click', e => {
   validate(inputEl.value) == true
     ? doMath(arr)
     : ((resultEl.innerHTML =
-        ' <i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i> Dozvoljeni format je niz cjelih brojeva podijeljen s jednim razmakom.'),
+        '<i class="fa fa-exclamation-triangle fa-fw" aria-hidden="true"></i> Dozvoljeni format je niz cjelih brojeva podijeljen s jednim razmakom.'),
       resultEl.classList.remove('alert-info', 'alert-success'),
       resultEl.classList.add('alert-error'))
 })
